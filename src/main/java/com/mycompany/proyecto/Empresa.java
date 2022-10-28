@@ -13,13 +13,13 @@ public class Empresa {
     private String nombre; 
     private String ubicacion;
     private String tipoEmpresa;
-    private Departamento departamento;
+  
 
-    public Empresa(String nombre, String ubicacion, String tipoEmpresa, Departamento departamento) {
+    public Empresa(String nombre, String ubicacion, String tipoEmpresa) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.tipoEmpresa = tipoEmpresa;
-        this.departamento = departamento;
+        
     }
 
     public String getNombre() {

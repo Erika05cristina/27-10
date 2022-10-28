@@ -11,20 +11,22 @@ package com.mycompany.proyecto;
 public class Proyecto {
 
     public static void main(String[] args) {
-
-        var bodega = new Departamento("89373", "Bodega", 10);
-        var secretaria = new Departamento("74479", "Secretaria", 3);
-        var gerencia = new Departamento("4562", "Gerencia", 1);
-        var atencionCliente = new Departamento("318", "atencionCliente", 4);
-        var limpieza = new Departamento("72392", "Limpieza", 8);
-        var supervicion = new Departamento("1237", "Supervicion", 3);
-
-        var pyca = new Empresa("Pyca", "Cuenca", "Plasticos", bodega);
-        var toyota = new Empresa("Toyota", "Guayaquil", "Autos", secretaria);
-        var italiana = new Empresa("La Italiana", "Quito", "Embutidos", gerencia);
-        var nike = new Empresa("Nike", "USA", "Zapatos", atencionCliente);
-        var papelesa = new Empresa("Papelesa", "Cuenca", "Papeleria", limpieza);
-        var samsung = new Empresa("Samsung", "Rusia", "Celulares", supervicion);
+        
+        var pyca = new Empresa("Pyca", "Cuenca", "Plasticos");
+        var toyota = new Empresa("Toyota", "Guayaquil", "Autos");
+        var italiana = new Empresa("La Italiana", "Quito", "Embutidos");
+        var nike = new Empresa("Nike", "USA", "Zapatos");
+        var papelesa = new Empresa("Papelesa", "Cuenca", "Papeleria");
+        var samsung = new Empresa("Samsung", "Rusia", "Celulares");
+        ///ERROR
+        var bodega = new Departamento("89373", "Bodega", 10, pyca.getEmpresa().getnombre() );
+        var secretaria = new Departamento("74479", "Secretaria", 3, toyota.getEmpresa.getNombre());
+        var gerencia = new Departamento("4562", "Gerencia", 1,italiana.getEmpresa().getnombre());
+        var atencionCliente = new Departamento("318", "atencionCliente", 4,nike.getEmpresa.getNombre());
+        var limpieza = new Departamento("72392", "Limpieza", 8,papelesa.getEmpresa.getnombre());
+        var supervicion = new Departamento("1237", "Supervicion", 3, samsung.getEmpresa.getNombre());
+////
+       
 
         var jose = new Empleado("0106424379", "Jose Marquez", "Bodeguero",2021, bodega);
         var pedro = new Empleado("019749532", "Pedro Velez", "Secretario", 2019,secretaria);

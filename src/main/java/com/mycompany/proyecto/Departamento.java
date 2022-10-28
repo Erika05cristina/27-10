@@ -12,12 +12,14 @@ public class Departamento {
     private String codigo;
     private String nombre;
     private int numeroTrabajadores;
+    private Empresa empresa;
   
 
-    public Departamento(String codigo,String nombre, int numeroTrabajadores) {
+    public Departamento(String codigo,String nombre, int numeroTrabajadores,Empresa empresa) {
         this.codigo = codigo;
         this.nombre=nombre;
         this.numeroTrabajadores = numeroTrabajadores;
+        this.empresa = empresa;
     }
 
     public String getCodigo() {
@@ -44,9 +46,11 @@ public class Departamento {
         this.numeroTrabajadores = numeroTrabajadores;
     }
     
+    
     public String mostrarInfo(){
         return"\nEl nombre del departamento es " + this.nombre +" y su codigo es "
-                + this.codigo +" y tiene "+ this.numeroTrabajadores+" trabajadores.";
+                + this.codigo +" y tiene "+ this.numeroTrabajadores
+                +" trabajadores, de la empresa " + this.empresa;
     }
     
     
