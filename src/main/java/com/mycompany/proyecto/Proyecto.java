@@ -48,7 +48,8 @@ public class Proyecto {
         System.out.println(cesar.mostrarInfo() + pyca.mostrarInfo() + limpieza.mostrarInfo());
         System.out.println(ana.mostrarInfo() + papelesa.mostrarInfo() + supervicion.mostrarInfo());
        
-        System.out.println("\n*****************************************");
+        System.out.println("\n****************************************************");
+        
         System.out.println("\n*El nombre del empleado es " + jose.getNombre()
                 + " su cedula es " + jose.getCedula() + " es " + jose.getCargo()
                 + " y trabaja durante " + jose.antiguedad() + " años" + "\nTrabaja en la empresa "
