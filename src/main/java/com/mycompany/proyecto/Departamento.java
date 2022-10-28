@@ -45,12 +45,20 @@ public class Departamento {
     public void setNumeroTrabajadores(int numeroTrabajadores) {
         this.numeroTrabajadores = numeroTrabajadores;
     }
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
     
     
     public String mostrarInfo(){
         return"\nEl nombre del departamento es " + this.nombre +" y su codigo es "
                 + this.codigo +" y tiene "+ this.numeroTrabajadores
-                +" trabajadores, de la empresa " + this.empresa;
+                +" trabajadores, de la empresa " + this.getEmpresa().getNombre();
     }
     
     

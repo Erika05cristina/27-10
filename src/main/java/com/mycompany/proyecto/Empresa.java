@@ -9,8 +9,8 @@ package com.mycompany.proyecto;
  * @author Kristina
  */
 public class Empresa {
-    
-    private String nombre; 
+
+    private String nombre;
     private String ubicacion;
     private String tipoEmpresa;
   
@@ -19,7 +19,7 @@ public class Empresa {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.tipoEmpresa = tipoEmpresa;
-        
+
     }
 
     public String getNombre() {
@@ -45,9 +45,10 @@ public class Empresa {
     public void setTipoEmpresa(String tipoEmpresa) {
         this.tipoEmpresa = tipoEmpresa;
     }
-    
-    public String mostrarInfo(){
-        return"\nTrabaja en la empresa " + this.nombre +" que esta ubicada en "
-                + this.ubicacion +" y es una empresa de "+ this.tipoEmpresa;
+
+    public String mostrarInfo() {
+        return "\nTrabaja en la empresa " + this.nombre + " que esta ubicada en "
+                + this.ubicacion + " y es una empresa de " + this.tipoEmpresa;
     }
+
 }

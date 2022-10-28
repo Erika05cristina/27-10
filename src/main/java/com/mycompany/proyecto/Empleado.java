@@ -10,18 +10,18 @@ package com.mycompany.proyecto;
  */
 public class Empleado {
 
-    private String cedula;
     private String nombre;
+    private String cedula;
     private String cargo;
     private int yearIngreso;
     private Departamento departamento;
 
-    public Empleado(String cedula, String nombre, String cargo, int yearIngreso, Departamento departamento) {
-        this.cedula = cedula;
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
         this.nombre = nombre;
-        this.cargo = cargo;
-        this.yearIngreso = yearIngreso;
-        this.departamento = departamento;
     }
 
     public String getCedula() {
@@ -32,14 +32,6 @@ public class Empleado {
         this.cedula = cedula;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getCargo() {
         return cargo;
     }
@@ -48,7 +40,13 @@ public class Empleado {
         this.cargo = cargo;
     }
 
-   
+    public int getYearIngreso() {
+        return yearIngreso;
+    }
+
+    public void setYearIngreso(int yearIngreso) {
+        this.yearIngreso = yearIngreso;
+    }
 
     public Departamento getDepartamento() {
         return departamento;
@@ -64,9 +62,19 @@ public class Empleado {
         return retorno;
     }
 
-    public String mostrarInfo() {
-        return "\n*El nombre del empleado es " + this.nombre + " su cedula es "
-                + this.cedula + " es " + this.cargo+ " y trabaja durante "+ antiguedad() +" años";
+    public Empleado(String nombre, String cedula, int yearIngreso, String cargo, Departamento departamento) {
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.yearIngreso = yearIngreso;
+        this.cargo = cargo;
+        this.departamento = departamento;
     }
 
-}
+    public String mostrarInfo() {
+        return "\nEl nombre del trabajador es " + nombre + " y su cedula es "
+                + cedula + " ingreso en el año " + yearIngreso + " trabaja de " 
+                + cargo + " y trabaja en el departamento de " + this.getDepartamento().getNombre() ;
+                              
+              
+    }
+     }
